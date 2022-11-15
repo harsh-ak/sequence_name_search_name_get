@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>      
+        <record id="action_server_create_so" model="ir.actions.server">
+            <field name="name">Create sale Order</field>
+            <field name="model_id" ref="own_task.model_create_so"/>
+            <field name="binding_model_id" ref="own_task.model_create_so"/>
+            <field name="binding_view_types">list,form</field>
+            <field name="state">code</field>
+            <field name="code">
+                records.action_create_so()
+            </field>
+        </record>
+
+    </data>
+</odoo>

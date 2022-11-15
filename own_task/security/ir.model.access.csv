@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_create_user_so,access_create_user_so,own_task.model_create_so,own_task.group_own_task_user,1,1,1,1
+access_create_manager_so,access_create_manager_so,own_task.model_create_so,own_task.group_own_task_manager,1,1,1,1

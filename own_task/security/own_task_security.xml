@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.module.category" id="module_own_task">
+            <field name="name">Own Task</field>
+            <field name="sequence">60</field>
+        </record>
+        <!-- User -->
+        <record id="group_own_task_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="own_task.module_own_task"/>
+        </record>
+        <!-- Manager -->
+        <record id="group_own_task_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="own_task.module_own_task"/>
+            <field name="implied_ids" eval="[(4, ref('own_task.group_own_task_user'))]"/>
+        </record>
+
+
+</data>
+</odoo>

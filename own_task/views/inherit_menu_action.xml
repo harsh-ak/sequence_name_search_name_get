@@ -1,0 +1,7 @@
+<odoo>
+
+	<menuitem id="my_menu"
+			name="My Menu"
+            action="base.action_country"
+            parent="sale.prod_config_main"/>
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="action_create_so"
+		model="ir.actions.act_window">
+		<field name="name">Create Sale Order</field>
+		<field name="res_model">create.so</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+<menuitem id="create_so"
+			name="Create Sale Order"
+            action="action_create_so"/>
+
+
+
+    
+        <record id="so_tree" model="ir.ui.view">
+            <field name="name">so.tree</field>
+            <field name="model">create.so</field>
+            <field name="arch" type="xml">
+                <tree string="Create sale Order">
+                    <field name="my_sequence"/>
+                    <field name="get_state" groups="own_task.group_own_task_manager"/>
+                    <field name="product_ids"/>
+                     <field name="partner_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="so_form" model="ir.ui.view">
+            <field name="name">so.form</field>
+            <field name="model">create.so</field>
+            <field name="arch" type="xml">
+                <form string="Account Type">
+                	<sheet>
+                    <group>
+                        <group>
+                            <field name="my_sequence"/>
+                            <field name="get_state" groups="own_task.group_own_task_manager"/>
+                            <field name="product_ids" widget="many2many_tags"/>
+                            <field name="partner_id"/>
+                        </group>
+            
+                    </group>
+  
+                </sheet>
+                </form>
+            </field>
+        </record>
+
+     
+
+       
+</odoo>
